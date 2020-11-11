@@ -1,0 +1,25 @@
+input
+aws iam create-role --role-name lambda-ex --assume-role-policy-document file://trust-policy.json
+
+output
+{
+    "Role": {
+        "Path": "/",
+        "RoleName": "lambda-ex",
+        "RoleId": "AROA3SR2SOOXD634VBPNU",
+        "Arn": "arn:aws:iam::795765535662:role/lambda-ex",
+        "CreateDate": "2020-11-11T02:46:31+00:00",
+        "AssumeRolePolicyDocument": {
+            "Version": "2012-10-17",
+            "Statement": [
+                {
+                    "Effect": "Allow",
+                    "Principal": {
+                        "Service": "lambda.amazonaws.com"
+                    },
+                    "Action": "sts:AssumeRole"
+                }
+            ]
+        }
+    }
+}
